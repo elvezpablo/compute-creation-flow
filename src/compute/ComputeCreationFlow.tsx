@@ -25,7 +25,7 @@ export default function ComputeCreationFlow() {
     <Container>
       <Title order={2}>Deploy Compute</Title>
       <Grid>
-        <Grid.Col span={9}>
+        <Grid.Col span={8}>
           <Stack>
             <TextInput
               required
@@ -255,7 +255,7 @@ export default function ComputeCreationFlow() {
             <Button>Create</Button>
           </Stack>
         </Grid.Col>
-        <Grid.Col span={3}>
+        <Grid.Col span={4}>
           <CostSummary />
         </Grid.Col>
       </Grid>
