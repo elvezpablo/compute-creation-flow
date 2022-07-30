@@ -19,6 +19,7 @@ import {
   Slider,
 } from '@mantine/core';
 import CostSummary from '../components/CostSummary';
+import SectionDiskSize from '../components/SectionDiskSize';
 
 export default function ComputeCreationFlow() {
   return (
@@ -155,6 +156,15 @@ export default function ComputeCreationFlow() {
               </Group>
             </Box>
             <Title order={3} sx={{ borderBottom: '1px solid #333' }}>
+              Carbon Offset
+            </Title>
+            <Collapse in={true}>
+              <Text>
+                Something about the carbon offset based on the number of GPUs or
+                power consumed?{' '}
+              </Text>
+            </Collapse>
+            <Title order={3} sx={{ borderBottom: '1px solid #333' }}>
               Storage
             </Title>
 
@@ -187,21 +197,7 @@ export default function ComputeCreationFlow() {
               </Paper>
             </Group>
 
-            <Title order={4}>Disk Size</Title>
-            <Collapse in={true}>
-              <Text>Attached Storage: 80GB @ $0.073/GB/month</Text>
-              <Slider
-                mx={'sm'}
-                my={'lg'}
-                defaultValue={80}
-                radius="xs"
-                marks={[
-                  { value: 10, label: '10GB' },
-                  { value: 50, label: '50GB' },
-                  { value: 100, label: '100GB' },
-                ]}
-              />
-            </Collapse>
+            <SectionDiskSize costGbPerHour={0.0008} />
 
             <Title order={3} sx={{ borderBottom: '1px solid #333' }}>
               Networking
