@@ -14,11 +14,7 @@ export default function SectionDiskSize({ costGbPerHour }: Props) {
         <Text>{`Attached Storage: 80GB @ ${currency.format(
           costGbPerHour
         )}/GB/hour`}</Text>
-        <TextInput
-          required
-          label="Name"
-          description="Name of the compute resouce"
-        />
+        <TextInput required label="Size in GB" />
       </Collapse>
     </div>
   );

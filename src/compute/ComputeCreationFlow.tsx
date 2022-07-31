@@ -36,7 +36,7 @@ export default function ComputeCreationFlow() {
             <Box>
               <Textarea
                 label="SSH Key"
-                description="Paste in an SSH key for the user of this VM."
+                description="Public SSH key for the user of this VM."
                 autosize
                 required
                 minRows={8}
@@ -44,6 +44,15 @@ export default function ComputeCreationFlow() {
                 placeholder="ssh-key"
               />
             </Box>
+            <Select
+              placeholder="Existing keys"
+              data={[
+                {
+                  label: 'Default Key',
+                  value: 'ssh-key',
+                },
+              ]}
+            />
 
             <Title order={3} sx={{ borderBottom: '1px solid #333' }}>
               Compute Resource

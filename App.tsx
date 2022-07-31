@@ -1,14 +1,13 @@
 import * as React from 'react';
-
+import CloudLogo from './src/assets/CloudLogoLight.svg';
 import {
   AppShell,
   Navbar,
   Header,
-  Title,
+  Group,
   useMantineTheme,
 } from '@mantine/core';
 
-import './style.css';
 import ComputeCreationFlow from './src/compute/ComputeCreationFlow';
 
 export default function App() {
@@ -32,10 +31,10 @@ export default function App() {
         </Navbar>
       }
       header={
-        <Header height={64} p="xs">
-          <Title order={3} style={{ marginTop: '10px' }}>
-            Crusoe Cloud
-          </Title>
+        <Header height={44} p="xs">
+          <Group>
+            <img width="188" height="20" src={CloudLogo} />
+          </Group>
         </Header>
       }
       styles={(theme) => ({
